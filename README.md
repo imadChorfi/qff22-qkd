@@ -1,15 +1,41 @@
-# Quantum Key Distribution Challenge
+# CQTraining2 : Quantum Key Distribution Challenge
 
 <p float="middle" style="pointer-events:none;">
-  <img align="middle" src="logos/qff22_logo.png" width="26%"/>
-  <picture>
-  <img align="middle" width="54%"/>
   </picture>
-  <img align="middle" src="logos/cqtech_logo.png" width="18%"/>
+  <img align="middle" src="logos/cqtech_logo.png" width="50%"/>
   
 </p>
 
-This challenge is proposed by [Constantine Quantum Technologies](https://cqtech.org/) for the [Qiskit Fall Fest 2022 at Algiers](https://qiskit-fall-fest-algiers.wtmalgiers.org/) organized by [Women Techmakers Algiers](https://www.linkedin.com/company/wtm-algiers/) & [GDG Algiers](https://www.gdgalgiers.com/)
+Welcome to the second edition of the CQTraining workshop! We are excited to have you join us at the University of Sétif 1 on June 10th, 2024. This workshop is designed to review and deepen your knowledge of Quantum Computing and use it to build a Quantum Key Distribution (QKD).
+## Installation
+
+To ensure you have all the necessary tools and packages installed, please follow the instructions below:
+
+### Using Conda
+To create the environment with all required dependencies, run:
+```bash
+conda env create -f cqtr2.yml
+```
+
+### Directly from PyPi
+Alternatively, you can install the necessary packages directly using pip:
+
+```bash
+pip install qiskit[visualization] qiskit-aer qiskit-ibm-runtime --upgrade
+```
+
+### Check Installation
+Check that you have everything correctly installed by running:
+```bash
+python -c "import qiskit; import qiskit_aer; import qiskit_ibm_runtime; print(qiskit.__version__); print(qiskit_aer.__version__); print(qiskit_ibm_runtime.__version__)"
+``` 
+
+You should get an output that ressembles (with potentially slighly different versions):
+```
+1.1.0
+0.14.2
+0.23.0
+```
 
 ## Introduction
 In the BB84 protocol, Alice sends Bob a series of single photons/states through a quantum channel. If Eve measures these photons before they reach Bob, then her measurement can be detected, and Alice and Bob will know that an eavesdropper is spying on them.
